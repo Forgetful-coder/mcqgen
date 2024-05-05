@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mcqgen
+Version: 0.0.1
+Author: Aayush Aggarwal
+Author-email: aayushaggarwal243@gmail.com
+Requires-Dist: openai
+Requires-Dist: langchain
+Requires-Dist: python-dotenv
+Requires-Dist: PyPDF2
+Requires-Dist: streamlit

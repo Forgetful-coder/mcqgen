@@ -3,6 +3,3 @@ langchain
 python-dotenv
 PyPDF2
 streamlit
-
-
--e .
