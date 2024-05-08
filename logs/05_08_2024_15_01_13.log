@@ -1,0 +1,7 @@
+[2024-05-08 15:01:35,210] 1026 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2024-05-08 15:01:36,421] 1026 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2024-05-08 15:01:36,424] 62 root - INFO - Total Tokens: 2129
+[2024-05-08 15:01:36,425] 63 root - INFO - Prompt Tokens: 1894
+[2024-05-08 15:01:36,425] 64 root - INFO - Completion Tokens: 235
+[2024-05-08 15:01:36,425] 65 root - INFO - Total Cost: 0.003311
+[2024-05-08 15:01:36,429] 44 root - ERROR - An error occurred: Expecting value: line 2 column 1 (char 1)
