@@ -9,6 +9,7 @@ from langchain.callbacks import get_openai_callback
 from src.mcq_generator.utils import read_file, get_table_data
 from src.mcq_generator.MCQGenerator import generate_review_chain
 from src.mcq_generator.logger import logging
+import base64
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -70,10 +71,20 @@ with st.form('user_inputs'):
                     if quiz:
                         table_data = get_table_data(quiz)
                         if table_data is not None:
+                            st.write("MCQ Data:")
+                            st.write(table_data)
                             df = pd.DataFrame(table_data)
-                            df.index += 1
+                            df.index += 1  # Adjust index to start from 1
+                            st.write("MCQ DataFrame:")
+                            st.write(df)
+                            # Display DataFrame in Streamlit app
                             st.table(df)
-                            st.text_area('Review', value=response['review'])
+
+                            # Add download button for CSV
+                            csv = df.to_csv(index=False)
+                            b64 = base64.b64encode(csv.encode()).decode()
+                            href = f'<a href="data:file/csv;base64,{b64}" download="mcq_data.csv">Download CSV</a>'
+                            st.markdown(href, unsafe_allow_html=True)
                         else:
                             st.error('Error in table data')
                     else:

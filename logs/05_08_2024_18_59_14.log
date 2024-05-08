@@ -1,0 +1,8 @@
+[2024-05-08 18:59:34,132] 1026 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2024-05-08 18:59:36,177] 1026 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2024-05-08 18:59:36,183] 63 root - INFO - Total Tokens: 2183
+[2024-05-08 18:59:36,183] 64 root - INFO - Prompt Tokens: 1894
+[2024-05-08 18:59:36,183] 65 root - INFO - Completion Tokens: 289
+[2024-05-08 18:59:36,183] 66 root - INFO - Total Cost: 0.0034189999999999997
+[2024-05-08 18:59:36,187] 45 root - ERROR - An error occurred: Expecting value: line 1 column 1 (char 0)
+[2024-05-08 18:59:36,189] 95 root - ERROR - An error occurred: DataFrame constructor not properly called!

@@ -25,9 +25,14 @@ def read_file(file):
     
 def get_table_data(quiz_str):
     try:
-        print("Received quiz_str:", quiz_str)  # Debugging: Print the received string
+        # Remove prefix if present
+        if quiz_str.startswith("### RESPONSE_JSON"):
+            quiz_str = quiz_str[len("### RESPONSE_JSON"):].strip()
+
+        # Parse JSON data
         quiz_dict = json.loads(quiz_str)
-        print("Parsed quiz_dict:", quiz_dict)  # Debugging: Print the parsed dictionary
+
+        # Construct DataFrame
         quiz_table_data = []
         for key, value in quiz_dict.items():
             mcq = value["mcq"]
@@ -44,4 +49,3 @@ def get_table_data(quiz_str):
         traceback.print_exception(type(e), e, e.__traceback__)
         logging.error('An error occurred: %s', e)
         return False
-

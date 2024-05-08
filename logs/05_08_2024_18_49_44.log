@@ -1,0 +1,6 @@
+[2024-05-08 18:50:07,788] 1026 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2024-05-08 18:50:09,397] 1026 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2024-05-08 18:50:09,401] 62 root - INFO - Total Tokens: 2376
+[2024-05-08 18:50:09,401] 63 root - INFO - Prompt Tokens: 2010
+[2024-05-08 18:50:09,402] 64 root - INFO - Completion Tokens: 366
+[2024-05-08 18:50:09,402] 65 root - INFO - Total Cost: 0.0037470000000000003
